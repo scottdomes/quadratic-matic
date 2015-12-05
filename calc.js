@@ -69,12 +69,13 @@ function displayAnswers() {
 
 	// Check for superfluous one values, and do not display them
 	if (e === 1) {
-		document.getElementById("e-final").style.display = "none";
+		document.getElementById("prettyanswer").innerHTML = "$$x= {" + d + "\\pm \\sqrt{" +discr + "} \\over" + f + "}.$$";
 	} 
 	if (f === 1) {
-		document.getElementById("f-final").style.display = "none";
+		document.getElementById("prettyanswer").innerHTML = "$$x= {" + d + "\\pm" + e + "\\sqrt{" +discr + "} \\over" + f + "}.$$";
 	}
 	document.getElementById("answers").style.display= "block";
+	MathJax.Hub.Typeset();
 }
 
 function submit() {
@@ -90,10 +91,6 @@ function submit() {
 		document.getElementById("x1").innerHTML = x1;
 		document.getElementById("x2").innerHTML = x2;
 		document.getElementById("discriminant").innerHTML = discr;
-		document.getElementById("d-final").innerHTML = d;
-		document.getElementById("e-final").innerHTML = e;
-		document.getElementById("discr-final").innerHTML = "&nbsp;" + discr + "&nbsp;";
-		document.getElementById("f-final").innerHTML = f;
 		displayAnswers();
 	
 	}
