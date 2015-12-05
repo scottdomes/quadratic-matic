@@ -1,0 +1,7 @@
+#equation-entry input, #equation-entry p {
+	display: inline-block;
+}
+
+#equation-entry input {
+	width: 20px;
+}
