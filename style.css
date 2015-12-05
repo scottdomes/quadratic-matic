@@ -58,16 +58,8 @@ h1, p {
 	display: none;
 }
 
-#prettyanswer-title {
-	width: 20%;
-	display: inline-block;
-	float: left;
-}
 
 #prettyanswer {
-	width: 80%;
-	display: inline-block;
-	float: left;
 	margin: 20px 0;
 }
 

@@ -68,12 +68,18 @@ function simplifyEquation () {
 function displayAnswers() {
 
 	// Check for superfluous one values, and do not display them
-	if (e === 1) {
-		document.getElementById("prettyanswer").innerHTML = "$$x= {" + d + "\\pm \\sqrt{" +discr + "} \\over" + f + "}.$$";
-	} 
-	if (f === 1) {
-		document.getElementById("prettyanswer").innerHTML = "$$x= {" + d + "\\pm" + e + "\\sqrt{" +discr + "} \\over" + f + "}.$$";
+	document.getElementById("prettyanswer").innerHTML = "$$x= {" + d + "\\pm";
+	if (e !== 1) {
+		document.getElementById("prettyanswer").innerHTML += e + "\\sqrt{" +discr + "}";
+	} else {
+		document.getElementById("prettyanswer").innerHTML += "\\sqrt{" +discr + "}";
 	}
+	if (f !==1) {
+		document.getElementById("prettyanswer").innerHTML += "\\over" + f + "}.$$";
+	} else {
+		document.getElementById("prettyanswer").innerHTML += "}.$$";
+	}
+
 	document.getElementById("answers").style.display= "block";
 	MathJax.Hub.Typeset();
 }
