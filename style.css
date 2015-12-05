@@ -1,7 +1,106 @@
+/* Global Styles */
+
+body {
+	background-color: #6bb5e7;
+	width: 100%;
+	color: white;
+}
+
+h1, p {
+	font-family: 'Lato', sans-serif;
+}
+
+
+/* Wrapper */
+
+#wrapper {
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* Title */
+
+#title {
+	font-size: 2em;
+}
+
+/* Equation Entry */
+
 #equation-entry input, #equation-entry p {
 	display: inline-block;
 }
 
+#equation-entry {
+	font-size: 2em;
+}
+
 #equation-entry input {
-	width: 20px;
+	font-size: 1.8em;
+	width: 80px;
+}
+
+#enter {
+	display: block;
+	width: 80%;
+	margin: 0 auto;
+	height: 60px;
+	background-color: #2980b9;
+	color: white;
+	font-family: 'Lato', sans-serif;
+	font-size: 1em;
+	margin-bottom: 40px;
+}
+
+/* Answer Display */
+
+#answers {
+	display: none;
+}
+
+#prettyanswer-title {
+	width: 20%;
+	display: inline-block;
+	float: left;
+}
+
+#prettyanswer {
+	width: 80%;
+	display: inline-block;
+	float: left;
+	margin: 20px 0;
+}
+
+#prettyanswer p {
+	margin: 0;
+	font-family: 'Verdana', 'Arial', serif;
+}
+
+#radical {
+	white-space: nowrap;
+}
+
+#discr-final {
+	text-decoration: overline;
+}
+
+#division-line {
+	margin: 0 auto;
+	width: 50%;
+}
+
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
 }

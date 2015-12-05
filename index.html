@@ -3,23 +3,53 @@
 
 <head>
 	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+	<title>Solve quadratic equations automagically</title>
 <head>
 
-<body>
+<body class="clearfix">
 
-	<div id="equation-entry">
-		<input id="a">
-		<p>x<sup>2</sup> + </p>
-		<input id="b">
-		<p>x + </p>
-		<input id="c">
-		<p> = 0</p>
-		<button id="enter" onClick="submit()">Enter</button>
-		<p id="x1"></p>
-		<p id="x2"></p>
-		<p id="discriminant"></p>
-		<p id="prettyanswer"></p>
+	<div id="wrapper" class="clearfix">
+
+		<div id="title">
+			<h1>quadratic-matic</h1>
+		</div>
+
+
+		<div id="equation-entry">
+			<input id="a">
+			<p>x<sup>2</sup> + </p>
+			<input id="b">
+			<p>x + </p>
+			<input id="c">
+			<p> = 0</p>
+			<button id="enter" onClick="submit()">Enter</button>
+
+			<div id="answers">
+
+				<p id="prettyanswer-title">Answer:</p>
+				<div id="prettyanswer">
+					<p id="d-final"></p>
+					<p> &plusmn; </p>
+					<p id="e-final"></p>
+					<span id="radical"> &radic;
+						<p id="discr-final"></p>
+					</span>
+					<hr id="division-line">
+					<p id="f-final"></p>
+				</div>
+
+				<p id="roots">Roots: <span id="x1"></span> and <span id="x2"></span></p>
+				<p>Discriminant: <span id="discriminant"></span></p>
+
+			</div>
+		</div>
+
 	</div>
+
 <script src="calc.js"></script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 </body>
 </html>

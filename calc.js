@@ -36,7 +36,8 @@ function calculateX () {
 
 	x1 = ((-b) + Math.sqrt(discr)) / (2 * a);
 	x2 = ((-b) - Math.sqrt(discr)) / (2 * a);
-
+	x1 = x1.toFixed(2);
+	x2 = x2.toFixed(2);
 }
 
 function simplifyEquation () {
@@ -62,24 +63,39 @@ function simplifyEquation () {
 		d = d / g;
 		g = 1;
 	}
+}
 
+function displayAnswers() {
+
+	// Check for superfluous one values, and do not display them
+	if (e === 1) {
+		document.getElementById("e-final").style.display = "none";
+	} 
+	if (f === 1) {
+		document.getElementById("f-final").style.display = "none";
+		document.getElementById("division-line").style.display = "none";
+	}
+	document.getElementById("answers").style.display= "block";
 }
 
 function submit() {
-	console.log("running");
 
 	defineValues();
-	console.log("defined");
+
 	// Check to make sure values have been entered
-	if (a !== undefined && b !== undefined && c !== undefined) {
-		console.log("passed!");
+	if (a !== "" && b !== "" && c !== "") {
+
 		discr = findDiscriminant();
 		calculateX();
 		simplifyEquation();
 		document.getElementById("x1").innerHTML = x1;
 		document.getElementById("x2").innerHTML = x2;
 		document.getElementById("discriminant").innerHTML = discr;
-		document.getElementById("prettyanswer").innerHTML = "Answer: <sup>" + d + " \xb1 " + e + " \u221A " + discr + "</sup>&frasl;<sub>" + f +"</sub>";
+		document.getElementById("d-final").innerHTML = d;
+		document.getElementById("e-final").innerHTML = e;
+		document.getElementById("discr-final").innerHTML = "&nbsp;" + discr + "&nbsp;";
+		document.getElementById("f-final").innerHTML = f;
+		displayAnswers();
 	
 	}
 	else {
