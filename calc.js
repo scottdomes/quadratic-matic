@@ -73,7 +73,6 @@ function displayAnswers() {
 	} 
 	if (f === 1) {
 		document.getElementById("f-final").style.display = "none";
-		document.getElementById("division-line").style.display = "none";
 	}
 	document.getElementById("answers").style.display= "block";
 }
